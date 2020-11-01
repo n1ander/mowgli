@@ -10,9 +10,10 @@ def createFile():
 
 def createZipFile(mylist):
     now = str(time.time())
+    os.chdir('build/')
     zf = zipfile.ZipFile("zipFile" + now + ".zip", mode='w')
     try:
-        os.chdir('docs/')
+        os.chdir('../docs/')
         for x in mylist:
             zf.write(x)
     finally:
