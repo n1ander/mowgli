@@ -1,6 +1,7 @@
-from libs import createFile, createZipFile, sortFileByTime, getFileName
+from libs import createFile, createZipFile, sortFileByTime, getFileName, sftpConnect
 
 createFile()
 res = sortFileByTime()
 mylist = getFileName(res)
-createZipFile(mylist)
+zipfile = createZipFile(mylist)
+sftpConnect(zipfile)
