@@ -19,5 +19,4 @@ def createZipFile(mylist):
     finally:
         print('closing...')
         zf.close()
-
-
+    return zf
