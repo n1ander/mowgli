@@ -3,13 +3,13 @@ import os
 import zipfile
 
 def createFile():
-    now = str(time.time())
+    now = time.strftime('%Y%m%d%H%M%S', time.gmtime())
     f = open("docs/demofile" + now + ".csv", "w")
     f.write("Woops! I have deleted the content!")
     f.close()
 
 def createZipFile(mylist):
-    now = str(time.time())
+    now = time.strftime('%Y%m%d%H%M%S', time.gmtime())
     os.chdir('build/')
     zf = zipfile.ZipFile("zipFile" + now + ".zip", mode='w')
     try:
