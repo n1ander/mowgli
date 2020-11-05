@@ -13,7 +13,7 @@ def createZipFile(mylist):
     os.chdir('build/')
     zf = zipfile.ZipFile("zipFile" + now + ".zip", mode='w')
     try:
-        os.chdir('../docs/')
+        os.chdir('../../CEWIS/out/')
         for x in mylist:
             zf.write(x)
     finally:

@@ -3,9 +3,9 @@ from itertools import islice
 import os
 
 def sortFileByTime():
-    dirpath = 'docs/'
+    dirpath = '../CEWIS/out/'
     path = sorted(Path(dirpath).iterdir(), key=os.path.getmtime)
-    res = list(islice(reversed(path), 0, 3))
+    res = list(islice(reversed(path), 0, 4))
     res.reverse()
     return res
 
