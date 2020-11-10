@@ -5,7 +5,7 @@ cnopts = pysftp.CnOpts()
 cnopts.hostkeys = None
 
 def sftpConnect(file):
-    now = str(time.time())
+    now = time.strftime('%Y%m%d%H%M%S', time.gmtime())
     file = "../build/" + file.filename
     remfile = "sites" + now + ".zip"
     try:

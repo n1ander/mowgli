@@ -17,6 +17,7 @@ def createZipFile(mylist):
         for x in mylist:
             zf.write(x)
     finally:
+        os.chdir('../../mowgli/docs/')
         print('closing...')
         zf.close()
     return zf

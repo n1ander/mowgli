@@ -4,4 +4,4 @@ from libs import createFile, createZipFile, sortFileByTime, getFileName, sftpCon
 res = sortFileByTime()
 mylist = getFileName(res)
 zipfile = createZipFile(mylist)
-#sftpConnect(zipfile)
+sftpConnect(zipfile)
