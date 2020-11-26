@@ -1,6 +1,7 @@
 import pysftp
 import time
 import smtplib
+import os
 
 cnopts = pysftp.CnOpts()
 cnopts.hostkeys = None
@@ -12,9 +13,9 @@ receiver = ""
 message = "From: " + sender + "\r\nTo: " + "<Automated Email>" + "\r\nSubject: Email Notification " + "\r\n\r\nFile has been sent successfully!" 
 
 def sftpConnect(file):
-    now = time.strftime('%Y%m%d%H%M%S', time.gmtime())
+    now = time.strftime('%Y%m%d', time.gmtime())
     file = "../build/" + file.filename
-    remfile = "sites" + now + ".zip"
+    remfile = "CustomerX" + now + ".zip"
     try:
         with pysftp.Connection('localhost', username='tester', password='password', cnopts=cnopts) as sftp:
             sftp.put(file, remfile)

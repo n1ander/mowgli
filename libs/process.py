@@ -1,12 +1,12 @@
 from pathlib import Path
 from itertools import islice
 import os
+import glob
 
 def sortFileByTime():
-    dirpath = '../CEWIS/out/'
-    path = sorted(Path(dirpath).iterdir(), key=os.path.getmtime)
+    path = glob.glob('../CEWIS/out/*.csv')
+    path.sort(key=os.path.getctime)
     res = list(islice(reversed(path), 0, 4))
-    res.reverse()
     return res
 
 def getFileName(res):
