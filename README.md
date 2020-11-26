@@ -1,5 +1,5 @@
 ## MOWGLI
-This project builds onto project KAA. It packages up the latest four csv files into a zip archieve and sends it out to a local SFTP server.
+This project builds onto project KAA. It packages up the latest four csv files into a zip archive and sends it out to a local SFTP server.
 
 ## Motivation
 CustomerX was looking to have daily csv files for four different projects sent to a SFTP server. I created this project to automate the business need.
